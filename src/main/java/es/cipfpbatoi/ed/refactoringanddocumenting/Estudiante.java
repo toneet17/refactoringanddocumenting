@@ -1,10 +1,10 @@
 package es.cipfpbatoi.ed.refactoringanddocumenting;
 
-public class Estudiante{
+public class Estudiante implements IComparable{
 	
 	int edad;
 	String nombre;
-	
+	private static final int MAYORIA_DE_EDAD = 18;
 	
 	public Estudiante(int edad, String nombre) {
 		this.edad = edad;
@@ -21,5 +21,10 @@ public class Estudiante{
 			return -1;
 		}
 	}
+	public boolean esMayorDeEdad()
+	{
+		return edad >= MAYORIA_DE_EDAD;
+	}
+	
 	
 }
